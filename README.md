@@ -33,3 +33,12 @@ Include the following JSON body in your request:
    "prompt": "prompt - your message",
    "stream": false
 }
+
+### Ollama
+
+On terminal, run 
+```sh
+ollama serve
+```
+
+You need to have the model you're using installed previously.
