@@ -5,8 +5,20 @@ const router = express.Router(); // Create a new router
 
 router.post('/chat', async (req, res) => {
     try {
-        // Send the user's message to the Ollama API
-        const response = await axios.post('http://localhost:11434/api/generate', req.body, {
+        // Format the request body for Ollama's chat API
+        const ollamaRequest = {
+            model: req.body.model,
+            messages: [
+                {
+                    role: "user",
+                    content: req.body.prompt
+                }
+            ],
+            stream: req.body.stream || false
+        };
+
+        // Send the user's message to the Ollama API using the chat endpoint
+        const response = await axios.post('http://localhost:11434/api/chat', ollamaRequest, {
             headers: { 'Content-Type': 'application/json' }
         });
         res.json(response.data); // Send the response from Ollama back to the user

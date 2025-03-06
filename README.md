@@ -1,6 +1,6 @@
 # My Reverse Proxy Server
 
-This project is a reverse proxy server implemented in Node.js. Below is an overview of the project structure and the purpose of each directory and file.
+This project is a reverse proxy server implemented in Node.js.
 
 ## Run
 
