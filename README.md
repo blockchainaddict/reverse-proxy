@@ -32,7 +32,8 @@ Include the following JSON body in your request:
    "model": "deepseek-r1:1.5b",
    "prompt": "prompt - your message",
    "stream": false
-}
+} 
+```
 
 ### Ollama
 
